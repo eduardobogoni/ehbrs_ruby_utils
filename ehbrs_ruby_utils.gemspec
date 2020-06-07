@@ -13,4 +13,6 @@ Gem::Specification.new do |s|
   s.summary     = 'Utilities for EHB/RS\'s Ruby projects.'
 
   s.files = Dir['{lib}/**/*']
+
+  s.add_development_dependency 'eac_ruby_gem_support', '~> 0.1', '>= 0.1.1'
 end
