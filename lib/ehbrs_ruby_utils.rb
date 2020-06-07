@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'eac_ruby_utils/core_ext'
+
 module EhbrsRubyUtils
-  require 'ehbrs_ruby_utils/version'
+  require_sub __FILE__
 end
