@@ -9,7 +9,7 @@ module EhbrsRubyUtils
       common_concern
 
       module InstanceMethods
-        ROOT_URL = 'https://en.boardgamearena.com'
+        ROOT_URL = 'https://boardgamearena.com'
 
         # @param suffix [String]
         # @return [Addressable::URI]
