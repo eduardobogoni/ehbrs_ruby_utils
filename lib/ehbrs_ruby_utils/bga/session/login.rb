@@ -24,7 +24,7 @@ module EhbrsRubyUtils
           input_username
           input_password
           submit_login
-          logged_by_message?(message_info)
+          logged_by_message?(waited_message_info)
         end
 
         def login_url

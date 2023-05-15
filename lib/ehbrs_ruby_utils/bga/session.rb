@@ -12,14 +12,14 @@ module EhbrsRubyUtils
 
       common_constructor :username, :password, super_args: -> { [::Aranha::Selenium::Session.new] }
 
-      # @return [String]
-      def message_info
-        wait_for_click(id: MESSAGE_ID).text
-      end
-
       # @return [EhbrsRubyUtils::Bga::Session::Player]
       def player(id)
         ::EhbrsRubyUtils::Bga::Session::Player.new(self, id)
+      end
+
+      # @return [String]
+      def waited_message_info
+        wait_for_click(id: MESSAGE_ID).text
       end
 
       require_sub __FILE__, include_modules: true, require_mode: :kernel
