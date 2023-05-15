@@ -17,6 +17,11 @@ module EhbrsRubyUtils
         ::EhbrsRubyUtils::Bga::Session::Player.new(self, id)
       end
 
+      # @return [String, nil]
+      def message_info
+        find_or_not_element(id: MESSAGE_ID).if_present { |v| v.text.strip }
+      end
+
       # @return [String]
       def waited_message_info
         wait_for_click(id: MESSAGE_ID).text
