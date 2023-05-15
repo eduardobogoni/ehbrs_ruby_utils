@@ -17,6 +17,12 @@ module EhbrsRubyUtils
           root_url + suffix
         end
 
+        # @para player_id [Integer]
+        # @return [Addressable::URI]
+        def player_game_stats_url(player_id)
+          build_url("/gamestats?player=#{player_id}")
+        end
+
         # @return [Addressable::URI]
         def root_url
           ROOT_URL.to_uri
