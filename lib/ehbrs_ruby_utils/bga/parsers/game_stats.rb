@@ -36,8 +36,10 @@ module EhbrsRubyUtils
           ).data
         end
 
+        # @param name [String]
+        # @return [Integer]
         def table_name_to_id(name)
-          name.gsub(/\A\#/, '')
+          name.gsub(/\A\#/, '').to_i
         end
 
         require_sub __FILE__

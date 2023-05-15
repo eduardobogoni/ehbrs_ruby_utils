@@ -4,7 +4,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 254
-  :id: '374270557'
+  :id: 374270557
   :players:
   - :rank: 1
     :id: 92442373
@@ -19,7 +19,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 122
-  :id: '375280703'
+  :id: 375280703
   :players:
   - :rank: 1
     :id: 84920871
@@ -34,7 +34,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 106
-  :id: '373870907'
+  :id: 373870907
   :players:
   - :rank: 1
     :id: 84920871
@@ -49,7 +49,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 105
-  :id: '373602409'
+  :id: 373602409
   :players:
   - :rank: 1
     :id: 84920871
@@ -64,7 +64,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 83
-  :id: '372806271'
+  :id: 372806271
   :players:
   - :rank: 1
     :id: 84920871
@@ -79,7 +79,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 1
-  :id: '373870075'
+  :id: 373870075
   :players:
   - :rank: 1
     :id: 90379834
@@ -94,7 +94,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 268
-  :id: '370752197'
+  :id: 370752197
   :players:
   - :rank: 1
     :id: 84920871
@@ -109,7 +109,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 262
-  :id: '372466754'
+  :id: 372466754
   :players:
   - :rank: 1
     :id: 84920871
@@ -124,7 +124,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 100
-  :id: '373747455'
+  :id: 373747455
   :players:
   - :rank: 1
     :id: 84559362
@@ -139,7 +139,7 @@
   :leave_penalty:
   :rank_increment:
   :rank_after: 256
-  :id: '373436042'
+  :id: 373436042
   :players:
   - :rank: 1
     :id: 84920871
