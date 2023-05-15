@@ -23,7 +23,7 @@ module EhbrsRubyUtils
 
         def item_data(item)
           r = super
-          r[:table_id] = table_name_to_id(r.delete(:table_name))
+          r[:id] = table_name_to_id(r.delete(:table_name))
           r[:players] = players_data(r.delete(:players))
           r
         end
