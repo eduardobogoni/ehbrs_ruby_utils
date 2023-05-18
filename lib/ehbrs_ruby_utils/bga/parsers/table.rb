@@ -14,6 +14,7 @@ module EhbrsRubyUtils
         field :estimated_duration, :string, './/*[@id = "estimated_duration"]/text()'
         field :options, :node, './/*[@id = "gameoptions"]'
         field :players, :node, './/*[@id = "game_result"]'
+        field :game_conceded, :node, './/*[@id = "game_conceded" and @style="display: block;"]'
 
         def item_xpath
           ITEM_XPATH
@@ -25,6 +26,7 @@ module EhbrsRubyUtils
             r[key] = self.class.const_get(key.to_s.camelize).from_node(r.fetch(key)).data
           end
           r[:creation_time] = process_creation_time(r[:creation_time])
+          r[:game_conceded] = process_game_conceded(r[:game_conceded])
           r
         end
 
@@ -32,6 +34,12 @@ module EhbrsRubyUtils
 
         def process_creation_time(creation_time)
           creation_time.gsub('Criado:', '').strip
+        end
+
+        # @param node [Nokogiri::XML::Element]
+        # @return [Boolean]
+        def process_game_conceded(node)
+          node.present?
         end
 
         require_sub __FILE__
