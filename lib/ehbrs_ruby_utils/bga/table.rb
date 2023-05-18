@@ -20,6 +20,11 @@ module EhbrsRubyUtils
         end
       end
 
+      # @return [Boolean]
+      def game_conceded?
+        game_conceded
+      end
+
       # @return [Addressable::URI]
       def url
         table_url(id)
