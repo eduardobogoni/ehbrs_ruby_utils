@@ -14,7 +14,7 @@ module EhbrsRubyUtils
           field :table_rank, :integer, './div[@class = "rank"]'
           field :id, :integer, './div[@class = "name"]/a/@href'
           field :name, :string, './div[@class = "name"]/a/text()'
-          field :score, :integer, './div[@class = "score"]'
+          field :score, :integer_optional, './div[@class = "score"]'
           field :win_points, :string, './/*[starts-with(@id, "winpoints_value_")]/text()'
           field :game_rank, :integer, './/*[@class = "gamerank_value"]/text()'
 

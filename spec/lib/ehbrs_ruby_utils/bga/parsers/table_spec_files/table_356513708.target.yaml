@@ -1,0 +1,47 @@
+---
+:game_name: Puerto Rico
+:creation_time: 14/03/2023 às 08:36
+:estimated_duration: 35 dias
+:options:
+- :label: Modo de Jogo
+  :value: Modo de treino
+  :description: 'Modo treino: sem rankings, sem limite de tempo por turno, sem penalidades.
+    Jogo em tempo real.'
+- :label: Variante de equilíbrio
+  :value: Jogo clássico
+  :description: ''
+- :label: Variante de dois jogadores
+  :value: Jogo clássico
+  :description: ''
+- :label: Primeira expansão - Novas construções
+  :value: Desligado
+  :description: ''
+- :label: Segunda expansão - Os nobres
+  :value: Desligado
+  :description: ''
+:players:
+- :table_rank:
+  :id: 84920871
+  :name: eduardobogoni
+  :score:
+  :win_points: ''
+  :game_rank:
+- :table_rank:
+  :id: 93167144
+  :name: iuriadmvr1
+  :score:
+  :win_points: ''
+  :game_rank:
+- :table_rank:
+  :id: 93205235
+  :name: generalcfmo
+  :score:
+  :win_points: ''
+  :game_rank:
+- :table_rank:
+  :id: 93212034
+  :name: danieltc
+  :score:
+  :win_points: ''
+  :game_rank:
+:game_conceded: false
