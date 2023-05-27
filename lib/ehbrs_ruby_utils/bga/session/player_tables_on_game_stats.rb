@@ -56,7 +56,7 @@ module EhbrsRubyUtils
         def list_end_reached?
           previous_count = current_data.count
           result = nil
-          session.wait_for_click(id: SEE_MORE_BUTTON_ID)
+          session.on_skip_trophies { session.wait_for_click(id: SEE_MORE_BUTTON_ID) }
           session.wait.until do
             result = list_end_reached_non_waiting(previous_count)
             !result.nil?
