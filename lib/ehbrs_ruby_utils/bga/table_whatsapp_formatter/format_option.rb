@@ -13,6 +13,6 @@ module EhbrsRubyUtils
           "*#{option.label}:* #{option.value}"
         end
       end
-      end
+    end
   end
 end

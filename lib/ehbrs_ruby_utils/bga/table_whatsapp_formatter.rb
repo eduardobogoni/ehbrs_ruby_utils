@@ -61,6 +61,6 @@ module EhbrsRubyUtils
       end
 
       require_sub __FILE__, require_mode: :kernel
-      end
+    end
   end
 end

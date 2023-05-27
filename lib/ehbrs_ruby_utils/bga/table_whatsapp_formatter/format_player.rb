@@ -25,6 +25,6 @@ module EhbrsRubyUtils
           "⭐ #{player.score}"
         end
       end
-      end
+    end
   end
 end
