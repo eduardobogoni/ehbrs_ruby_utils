@@ -26,24 +26,24 @@
   :id: 918656
   :name: bonedigger
   :score: 1
-  :elo_increment: "+0"
+  :elo_increment: 0
   :elo_reached: 330
 - :rank: 1
   :id: 84920871
   :name: eduardobogoni
   :score: 1
-  :elo_increment: "+0"
+  :elo_increment: 0
   :elo_reached: 254
 - :rank: 1
   :id: 92267577
   :name: daniellewallace
   :score: 1
-  :elo_increment: "+19"
+  :elo_increment: 19
   :elo_reached: 90
 - :rank: 4
   :id: 94109403
   :name: DidejantiEntropija
   :score: 0
-  :elo_increment: "+0 - 0"
+  :elo_increment: 0
   :elo_reached: 38
 :game_conceded: false

@@ -43,12 +43,12 @@
   :id: 84559362
   :name: Lality
   :score: 52
-  :elo_increment: "+10"
+  :elo_increment: 10
   :elo_reached: 111
 - :rank: 2
   :id: 84920871
   :name: eduardobogoni
   :score: 48
-  :elo_increment: "-22"
+  :elo_increment: -22
   :elo_reached: 100
 :game_conceded: false

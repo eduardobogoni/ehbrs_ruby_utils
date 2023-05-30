@@ -24,12 +24,12 @@
   :id: 84920871
   :name: eduardobogoni
   :score: 53
-  :elo_increment: ''
+  :elo_increment:
   :elo_reached:
 - :rank: 2
   :id: 93167144
   :name: iuriadmvr1
   :score: 43
-  :elo_increment: ''
+  :elo_increment:
   :elo_reached:
 :game_conceded: false

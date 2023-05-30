@@ -2,6 +2,7 @@
 
 require 'aranha/parsers/html/item'
 require 'aranha/parsers/html/item_list'
+require 'dentaku'
 require 'eac_ruby_utils/core_ext'
 
 module EhbrsRubyUtils
@@ -24,9 +25,16 @@ module EhbrsRubyUtils
           end
 
           def item_data(data)
-            %i[rank].inject(data) do |a, e|
+            %i[elo_increment rank].inject(data) do |a, e|
               a.merge(e => send("process_#{e}", data.fetch(e)))
             end
+          end
+
+          # @return [Integer, nil]
+          def process_elo_increment(expression)
+            return nil if expression.blank?
+
+            ::Dentaku::Calculator.new.evaluate(expression.gsub(/\A\+/, '')).to_i
           end
 
           # @param value [String]

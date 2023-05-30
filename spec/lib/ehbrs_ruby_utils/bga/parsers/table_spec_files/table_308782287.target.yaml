@@ -30,12 +30,12 @@
   :id: 91454158
   :name: SYushen
   :score: 1
-  :elo_increment: "+0"
+  :elo_increment: 0
   :elo_reached: 682
 - :rank: 2
   :id: 93205235
   :name: generalcfmo
   :score: 0
-  :elo_increment: "+0 - 0"
+  :elo_increment: 0
   :elo_reached: 0
 :game_conceded: false
