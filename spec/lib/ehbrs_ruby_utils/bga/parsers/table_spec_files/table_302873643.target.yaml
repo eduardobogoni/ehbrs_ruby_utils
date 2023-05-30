@@ -25,11 +25,11 @@
   :name: eduardobogoni
   :score: 53
   :elo_increment: ''
-  :game_rank:
+  :elo_reached:
 - :table_rank: 2
   :id: 93167144
   :name: iuriadmvr1
   :score: 43
   :elo_increment: ''
-  :game_rank:
+  :elo_reached:
 :game_conceded: false

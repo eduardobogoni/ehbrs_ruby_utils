@@ -15,11 +15,11 @@
   :name: eduardobogoni
   :score: 0
   :elo_increment: "+30"
-  :game_rank: 105
+  :elo_reached: 105
 - :table_rank: 2
   :id: 93212034
   :name: danieltc
   :score: 0
   :elo_increment: "+0"
-  :game_rank: 75
+  :elo_reached: 75
 :game_conceded: true

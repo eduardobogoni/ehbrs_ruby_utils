@@ -25,23 +25,23 @@
   :name: eduardobogoni
   :score:
   :elo_increment: ''
-  :game_rank:
+  :elo_reached:
 - :table_rank:
   :id: 93167144
   :name: iuriadmvr1
   :score:
   :elo_increment: ''
-  :game_rank:
+  :elo_reached:
 - :table_rank:
   :id: 93205235
   :name: generalcfmo
   :score:
   :elo_increment: ''
-  :game_rank:
+  :elo_reached:
 - :table_rank:
   :id: 93212034
   :name: danieltc
   :score:
   :elo_increment: ''
-  :game_rank:
+  :elo_reached:
 :game_conceded: false

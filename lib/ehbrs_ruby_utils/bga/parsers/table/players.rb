@@ -16,7 +16,7 @@ module EhbrsRubyUtils
           field :name, :string, './div[@class = "name"]/a/text()'
           field :score, :integer_optional, './div[@class = "score"]'
           field :elo_increment, :string, './/*[starts-with(@id, "winpoints_value_")]/text()'
-          field :game_rank, :integer, './/*[@class = "gamerank_value"]/text()'
+          field :elo_reached, :integer, './/*[@class = "gamerank_value"]/text()'
 
           def items_xpath
             ITEMS_XPATH
