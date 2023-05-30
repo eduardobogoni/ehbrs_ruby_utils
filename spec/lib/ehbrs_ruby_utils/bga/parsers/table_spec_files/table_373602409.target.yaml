@@ -14,12 +14,12 @@
   :id: 84920871
   :name: eduardobogoni
   :score: 0
-  :win_points: "+30"
+  :elo_increment: "+30"
   :game_rank: 105
 - :table_rank: 2
   :id: 93212034
   :name: danieltc
   :score: 0
-  :win_points: "+0"
+  :elo_increment: "+0"
   :game_rank: 75
 :game_conceded: true

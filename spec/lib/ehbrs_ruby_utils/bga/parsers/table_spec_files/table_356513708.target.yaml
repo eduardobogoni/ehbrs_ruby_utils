@@ -24,24 +24,24 @@
   :id: 84920871
   :name: eduardobogoni
   :score:
-  :win_points: ''
+  :elo_increment: ''
   :game_rank:
 - :table_rank:
   :id: 93167144
   :name: iuriadmvr1
   :score:
-  :win_points: ''
+  :elo_increment: ''
   :game_rank:
 - :table_rank:
   :id: 93205235
   :name: generalcfmo
   :score:
-  :win_points: ''
+  :elo_increment: ''
   :game_rank:
 - :table_rank:
   :id: 93212034
   :name: danieltc
   :score:
-  :win_points: ''
+  :elo_increment: ''
   :game_rank:
 :game_conceded: false

@@ -43,12 +43,12 @@
   :id: 84559362
   :name: Lality
   :score: 52
-  :win_points: "+10"
+  :elo_increment: "+10"
   :game_rank: 111
 - :table_rank: 2
   :id: 84920871
   :name: eduardobogoni
   :score: 48
-  :win_points: "-22"
+  :elo_increment: "-22"
   :game_rank: 100
 :game_conceded: false

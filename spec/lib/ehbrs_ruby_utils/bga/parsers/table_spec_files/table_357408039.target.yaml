@@ -26,30 +26,30 @@
   :id: 84920871
   :name: eduardobogoni
   :score: 1
-  :win_points: "+0"
+  :elo_increment: "+0"
   :game_rank: 230
 - :table_rank: 1
   :id: 93205235
   :name: generalcfmo
   :score: 1
-  :win_points: "+3"
+  :elo_increment: "+3"
   :game_rank: 99
 - :table_rank: 1
   :id: 93212034
   :name: danieltc
   :score: 1
-  :win_points: "+16"
+  :elo_increment: "+16"
   :game_rank: 32
 - :table_rank: 1
   :id: 93223573
   :name: Duduzim
   :score: 1
-  :win_points: "+16"
+  :elo_increment: "+16"
   :game_rank: 33
 - :table_rank: 5
   :id: 93167144
   :name: iuriadmvr1
   :score: 0
-  :win_points: "-25 - 10"
+  :elo_increment: "-25 - 10"
   :game_rank: 159
 :game_conceded: false
