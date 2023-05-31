@@ -19,6 +19,8 @@ module EhbrsRubyUtils
           field :score, :integer_optional, './div[@class = "score"]'
           field :elo_increment, :string, './/*[starts-with(@id, "winpoints_value_")]/text()'
           field :elo_reached, :integer, './/*[@class = "gamerank_value"]/text()'
+          field :penalty_clock, :boolean,
+                './/*[@class = "clockpenalty" and @style = "display: inline;"]'
 
           def items_xpath
             ITEMS_XPATH

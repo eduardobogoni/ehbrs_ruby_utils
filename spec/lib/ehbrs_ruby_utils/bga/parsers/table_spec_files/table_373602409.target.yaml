@@ -16,10 +16,12 @@
   :score: 0
   :elo_increment: 30
   :elo_reached: 105
+  :penalty_clock: false
 - :rank: 2
   :id: 93212034
   :name: danieltc
   :score: 0
   :elo_increment: 0
   :elo_reached: 75
+  :penalty_clock: false
 :game_conceded: true
