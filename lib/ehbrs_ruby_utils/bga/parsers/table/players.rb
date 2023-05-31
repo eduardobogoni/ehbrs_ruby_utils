@@ -10,8 +10,9 @@ module EhbrsRubyUtils
       class Table < ::Aranha::Parsers::Html::Item
         class Players < ::Aranha::Parsers::Html::ItemList
           ITEMS_XPATH = '//div[starts-with(@id, "score_entry_")]'
+          RANK_VALUES = { vencedor: 1, perdedor: 2 }.freeze
 
-          field :rank, :integer, './div[@class = "rank"]'
+          field :rank, :string, './div[@class = "rank"]'
           field :id, :integer, './div[@class = "name"]/a/@href'
           field :name, :string, './div[@class = "name"]/a/text()'
           field :score, :integer_optional, './div[@class = "score"]'
@@ -20,6 +21,18 @@ module EhbrsRubyUtils
 
           def items_xpath
             ITEMS_XPATH
+          end
+
+          def item_data(data)
+            %i[rank].inject(data) do |a, e|
+              a.merge(e => send("process_#{e}", data.fetch(e)))
+            end
+          end
+
+          # @param value [String]
+          # @return [Integer]
+          def process_rank(source)
+            RANK_VALUES[source.downcase.to_sym] || source.to_i
           end
         end
       end
