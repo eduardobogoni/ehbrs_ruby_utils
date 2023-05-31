@@ -21,6 +21,8 @@ module EhbrsRubyUtils
           field :elo_reached, :integer, './/*[@class = "gamerank_value"]/text()'
           field :penalty_clock, :boolean,
                 './/*[@class = "clockpenalty" and @style = "display: inline;"]'
+          field :penalty_leave, :boolean,
+                './/*[@class = "leavepenalty" and @style = "display: inline;"]'
 
           def items_xpath
             ITEMS_XPATH

@@ -27,6 +27,7 @@
   :elo_increment:
   :elo_reached:
   :penalty_clock: false
+  :penalty_leave: false
 - :rank: 2
   :id: 93167144
   :name: iuriadmvr1
@@ -34,4 +35,5 @@
   :elo_increment:
   :elo_reached:
   :penalty_clock: false
+  :penalty_leave: false
 :game_conceded: false

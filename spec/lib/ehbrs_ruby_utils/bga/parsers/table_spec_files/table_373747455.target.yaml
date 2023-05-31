@@ -46,6 +46,7 @@
   :elo_increment: 10
   :elo_reached: 111
   :penalty_clock: false
+  :penalty_leave: false
 - :rank: 2
   :id: 84920871
   :name: eduardobogoni
@@ -53,4 +54,5 @@
   :elo_increment: -22
   :elo_reached: 100
   :penalty_clock: false
+  :penalty_leave: false
 :game_conceded: false

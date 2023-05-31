@@ -33,6 +33,7 @@
   :elo_increment: 0
   :elo_reached: 682
   :penalty_clock: false
+  :penalty_leave: false
 - :rank: 2
   :id: 93205235
   :name: generalcfmo
@@ -40,4 +41,5 @@
   :elo_increment: 0
   :elo_reached: 0
   :penalty_clock: true
+  :penalty_leave: true
 :game_conceded: false
