@@ -20,13 +20,13 @@
   :value: Desligado
   :description: ''
 :players:
-- :table_rank: 1
+- :rank: 1
   :id: 84920871
   :name: eduardobogoni
   :score: 53
   :elo_increment: ''
   :elo_reached:
-- :table_rank: 2
+- :rank: 2
   :id: 93167144
   :name: iuriadmvr1
   :score: 43

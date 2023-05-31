@@ -16,7 +16,7 @@ module EhbrsRubyUtils
         end
 
         def table_rank
-          "*#{player.table_rank}º*"
+          "*#{player.rank}º*"
         end
 
         delegate :name, to: :player

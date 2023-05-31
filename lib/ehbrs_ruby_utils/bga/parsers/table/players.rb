@@ -11,7 +11,7 @@ module EhbrsRubyUtils
         class Players < ::Aranha::Parsers::Html::ItemList
           ITEMS_XPATH = '//div[starts-with(@id, "score_entry_")]'
 
-          field :table_rank, :integer, './div[@class = "rank"]'
+          field :rank, :integer, './div[@class = "rank"]'
           field :id, :integer, './div[@class = "name"]/a/@href'
           field :name, :string, './div[@class = "name"]/a/text()'
           field :score, :integer_optional, './div[@class = "score"]'

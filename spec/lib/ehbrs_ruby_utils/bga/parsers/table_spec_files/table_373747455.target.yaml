@@ -39,13 +39,13 @@
   :description: Coletar todas as Faixas de Poesia e todas as Faixas Azuis conta como
     um yaku de 4 pontos além dos outros yakus de Faixas.
 :players:
-- :table_rank: 1
+- :rank: 1
   :id: 84559362
   :name: Lality
   :score: 52
   :elo_increment: "+10"
   :elo_reached: 111
-- :table_rank: 2
+- :rank: 2
   :id: 84920871
   :name: eduardobogoni
   :score: 48

@@ -20,25 +20,25 @@
   :value: Desligado
   :description: ''
 :players:
-- :table_rank:
+- :rank:
   :id: 84920871
   :name: eduardobogoni
   :score:
   :elo_increment: ''
   :elo_reached:
-- :table_rank:
+- :rank:
   :id: 93167144
   :name: iuriadmvr1
   :score:
   :elo_increment: ''
   :elo_reached:
-- :table_rank:
+- :rank:
   :id: 93205235
   :name: generalcfmo
   :score:
   :elo_increment: ''
   :elo_reached:
-- :table_rank:
+- :rank:
   :id: 93212034
   :name: danieltc
   :score:

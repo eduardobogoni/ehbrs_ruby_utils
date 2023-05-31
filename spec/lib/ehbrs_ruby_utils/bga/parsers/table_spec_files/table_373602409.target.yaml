@@ -10,13 +10,13 @@
   :value: Modo em turnos • 1 movimento a cada 2 dias
   :description: "+2 dias por turno (maximum 6 dias)"
 :players:
-- :table_rank: 1
+- :rank: 1
   :id: 84920871
   :name: eduardobogoni
   :score: 0
   :elo_increment: "+30"
   :elo_reached: 105
-- :table_rank: 2
+- :rank: 2
   :id: 93212034
   :name: danieltc
   :score: 0
