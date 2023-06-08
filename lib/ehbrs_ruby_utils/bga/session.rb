@@ -10,7 +10,8 @@ module EhbrsRubyUtils
       include ::EhbrsRubyUtils::Bga::Urls
       MESSAGE_ID = 'head_infomsg_1'
 
-      common_constructor :username, :password, super_args: -> { [::Aranha::Selenium::Session.new] }
+      common_constructor :username, :password,
+                         super_args: -> { [::Aranha::Selenium::Session.new(driver: :chrome)] }
 
       # @return [EhbrsRubyUtils::Bga::Session::Player]
       def player(id)
