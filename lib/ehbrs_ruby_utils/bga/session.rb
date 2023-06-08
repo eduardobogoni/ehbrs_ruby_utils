@@ -22,11 +22,6 @@ module EhbrsRubyUtils
         find_or_not_element(id: MESSAGE_ID).if_present { |v| v.text.strip }
       end
 
-      # @return [String]
-      def waited_message_info
-        wait_for_click(id: MESSAGE_ID).text
-      end
-
       require_sub __FILE__, include_modules: true, require_mode: :kernel
     end
   end

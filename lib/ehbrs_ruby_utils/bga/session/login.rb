@@ -10,13 +10,6 @@ module EhbrsRubyUtils
         USERNAME_INPUT_ID = 'username_input'
         PASSWORD_INPUT_ID = 'password_input'
         SUBMIT_ID = 'login_button'
-        LOGGED_MESSAGE_PATTERNS = [
-          /Page not found/ # Page not found: join.js
-        ].freeze
-        UNLOGGED_MESSAGE_PATTERSN = [
-          /Recover my password/ # Oops, we don't recognize your username or password. Don't panic.
-          # (Recover my password)
-        ].freeze
 
         # @return [Boolean]
         def login
@@ -24,7 +17,7 @@ module EhbrsRubyUtils
           input_username
           input_password
           submit_login
-          logged_by_message?(waited_message_info)
+          logged?
         end
 
         def login_url
@@ -47,14 +40,6 @@ module EhbrsRubyUtils
 
         def submit_login
           wait_for_click(id: SUBMIT_ID)
-        end
-
-        # @return [Boolean]
-        def logged_by_message?(message_info)
-          return true if LOGGED_MESSAGE_PATTERNS.any? { |p| p.match?(message_info) }
-          return false if UNLOGGED_MESSAGE_PATTERNS.any? { |p| p.match?(message_info) }
-
-          raise("Unmapped login message: \"#{message_info}\"")
         end
       end
     end
