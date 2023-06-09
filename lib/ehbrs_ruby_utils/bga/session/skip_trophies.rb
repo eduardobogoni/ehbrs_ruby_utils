@@ -37,7 +37,7 @@ module EhbrsRubyUtils
 
         # @return [Boolean]
         def skip_trophy_overlay?
-          find_element(xpath: TROPHY_SKIP_BUTTON_XPATH).present?
+          find_or_not_element(xpath: TROPHY_SKIP_BUTTON_XPATH).present?
         end
       end
     end
