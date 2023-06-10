@@ -21,11 +21,6 @@ module EhbrsRubyUtils
       }.freeze
       SECTION_SEPARATOR = "\n\n"
 
-      def perform
-        infov 'Fetching table', table_id
-        infov 'Message', "<<<EOS\n#{to_message}\nEOS\n"
-      end
-
       def to_s
         [root_items_to_s, players_to_s, options_to_s].map(&:strip).join(SECTION_SEPARATOR)
       end
