@@ -21,6 +21,11 @@ module EhbrsRubyUtils
       }.freeze
       SECTION_SEPARATOR = "\n\n"
 
+      # @return [Pathname]
+      def image_local_path
+        table.game.box_large_image.local_path
+      end
+
       def to_s
         [root_items_to_s, players_to_s, options_to_s].map(&:strip).join(SECTION_SEPARATOR)
       end
