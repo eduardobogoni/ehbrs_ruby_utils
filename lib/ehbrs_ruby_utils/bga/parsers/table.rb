@@ -7,8 +7,10 @@ module EhbrsRubyUtils
   module Bga
     module Parsers
       class Table < ::Aranha::Parsers::Html::Item
+        GAME_IMAGE_URL_PARSER = %r{/gamemedia/([^/]+)/box/}.to_parser { |m| m[1] }
         ITEM_XPATH = '/'
 
+        field :game_code, :string, '//meta[@property="og:image"]/@content'
         field :game_name, :string, './/*[@id = "table_name"]/text()'
         field :creation_time, :string, './/*[@id = "creationtime"]/text()'
         field :estimated_duration, :string, './/*[@id = "estimated_duration"]/text()'
@@ -25,7 +27,7 @@ module EhbrsRubyUtils
           %i[options players].each do |key|
             r[key] = self.class.const_get(key.to_s.camelize).from_node(r.fetch(key)).data
           end
-          %i[creation_time game_conceded].each do |key|
+          %i[creation_time game_code game_conceded].each do |key|
             r[key] = send("process_#{key}", r.fetch(key))
           end
           r
@@ -35,6 +37,12 @@ module EhbrsRubyUtils
 
         def process_creation_time(creation_time)
           creation_time.gsub('Criado:', '').strip
+        end
+
+        # @param node [String]
+        # @return [String]
+        def process_game_code(image_url)
+          GAME_IMAGE_URL_PARSER.parse!(image_url)
         end
 
         # @param node [Nokogiri::XML::Element]
