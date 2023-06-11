@@ -25,8 +25,9 @@ module EhbrsRubyUtils
           %i[options players].each do |key|
             r[key] = self.class.const_get(key.to_s.camelize).from_node(r.fetch(key)).data
           end
-          r[:creation_time] = process_creation_time(r[:creation_time])
-          r[:game_conceded] = process_game_conceded(r[:game_conceded])
+          %i[creation_time game_conceded].each do |key|
+            r[key] = send("process_#{key}", r.fetch(key))
+          end
           r
         end
 
