@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'ehbrs_ruby_utils/bga/game'
 require 'ehbrs_ruby_utils/bga/parsers/table'
 require 'ehbrs_ruby_utils/bga/parsers/table/options'
 require 'ehbrs_ruby_utils/bga/urls'
@@ -32,6 +33,11 @@ module EhbrsRubyUtils
       end
 
       private
+
+      # @return [EhbrsRubyUtils::Bga::Game]
+      def game_uncached
+        ::EhbrsRubyUtils::Bga::Game.new(game_code)
+      end
 
       SET_ITEMS.each do |item|
         define_method "#{item}_uncached" do
