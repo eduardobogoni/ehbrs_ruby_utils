@@ -11,6 +11,13 @@ module EhbrsRubyUtils
       include ::Singleton
       acts_as_abstract :bga_usernam, :bga_password, :whatsapp_recipient
 
+      # @param table [EhbrsRubyUtils::Bga::Table]
+      # @return [void]
+      def bga_table_notify(table)
+        formatter = ::EhbrsRubyUtils::Bga::TableWhatsappFormatter.new(table)
+        whatsapp_send(formatter.to_s, formatter.image_local_path)
+      end
+
       def on_bga_logged_session(&block)
         bga_session = new_bga_session
         begin
