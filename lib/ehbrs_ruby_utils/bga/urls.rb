@@ -19,6 +19,12 @@ module EhbrsRubyUtils
 
         # @para player_id [Integer]
         # @return [Addressable::URI]
+        def player_game_in_progress_url(player_id)
+          build_url("/gameinprogress?player=#{player_id}&all")
+        end
+
+        # @para player_id [Integer]
+        # @return [Addressable::URI]
         def player_game_stats_url(player_id)
           build_url("/gamestats?player=#{player_id}")
         end
