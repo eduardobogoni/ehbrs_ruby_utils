@@ -2,6 +2,7 @@
 
 require 'ehbrs_ruby_utils/bga/session'
 require 'ehbrs_ruby_utils/executables'
+require 'ehbrs_ruby_utils/mudslide/message'
 require 'eac_ruby_utils/core_ext'
 
 module EhbrsRubyUtils
@@ -29,11 +30,8 @@ module EhbrsRubyUtils
       # @param image_path [Pathname]
       # @return [void]
       def whatsapp_send(message, image_path = nil)
-        if image_path.present?
-          mudslide_run('send-image', '--caption', message, whatsapp_recipient, image_path)
-        else
-          mudslide_run('send', whatsapp_recipient, message)
-        end
+        ::EhbrsRubyUtils::Mudslide::Message.new.text(message).image_path(image_path)
+          .recipient(whatsapp_recipient).deliver
       end
 
       private
