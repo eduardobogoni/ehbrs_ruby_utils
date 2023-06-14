@@ -24,10 +24,10 @@ module EhbrsRubyUtils
 
         def data
           r = super
-          %i[options players].each do |key|
+          %i[players].each do |key|
             r[key] = self.class.const_get(key.to_s.camelize).from_node(r.fetch(key)).data
           end
-          %i[creation_time game_code game_conceded].each do |key|
+          %i[creation_time game_code game_conceded options].each do |key|
             r[key] = send("process_#{key}", r.fetch(key))
           end
           r
@@ -49,6 +49,10 @@ module EhbrsRubyUtils
         # @return [Boolean]
         def process_game_conceded(node)
           node.present?
+        end
+
+        def process_options(node)
+          ::EhbrsRubyUtils::Bga::Parsers::Table::Options.from_node(node).data
         end
 
         require_sub __FILE__
