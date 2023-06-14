@@ -7,15 +7,23 @@ module EhbrsRubyUtils
   module Bga
     module Parsers
       class Table < ::Aranha::Parsers::Html::Item
+        require_sub __FILE__
+
         GAME_IMAGE_URL_PARSER = %r{/gamemedia/([^/]+)/box/}.to_parser { |m| m[1] }
         ITEM_XPATH = '/'
+        PLAYERS_IDS = {
+          'game_result' => ::EhbrsRubyUtils::Bga::Parsers::Table::EndedPlayers,
+          'players_at_table' => ::EhbrsRubyUtils::Bga::Parsers::Table::ActivePlayers
+        }.freeze
+        PLAYERS_IDS_XPATH = PLAYERS_IDS.keys.map { |id| "@id = \"#{id}\"" }.join(' or ')
+        PLAYERS_XPATH = ".//*[(#{PLAYERS_IDS_XPATH}) and count(./*) > 0]"
 
         field :game_code, :string, '//meta[@property="og:image"]/@content'
         field :game_name, :string, './/*[@id = "table_name"]/text()'
         field :creation_time, :string, './/*[@id = "creationtime"]/text()'
         field :estimated_duration, :string, './/*[@id = "estimated_duration"]/text()'
         field :options, :node, './/*[@id = "gameoptions"]'
-        field :players, :node, './/*[@id = "game_result"]'
+        field :players, :node, PLAYERS_XPATH
         field :game_conceded, :node, './/*[@id = "game_conceded" and @style="display: block;"]'
 
         def item_xpath
@@ -62,11 +70,9 @@ module EhbrsRubyUtils
 
         # @param node [Nokogiri::XML::Element]
         # @return [Class]
-        def process_players_parser(_node)
-          ::EhbrsRubyUtils::Bga::Parsers::Table::EndedPlayers
+        def process_players_parser(node)
+          PLAYERS_IDS.fetch(node.attribute('id').value)
         end
-
-        require_sub __FILE__
       end
     end
   end
