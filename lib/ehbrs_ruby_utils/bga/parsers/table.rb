@@ -57,7 +57,13 @@ module EhbrsRubyUtils
         # @param node [Nokogiri::XML::Element]
         # @return [Hash]
         def process_players(node)
-          ::EhbrsRubyUtils::Bga::Parsers::Table::Players.from_node(node).data
+          process_players_parser(node).from_node(node).data
+        end
+
+        # @param node [Nokogiri::XML::Element]
+        # @return [Class]
+        def process_players_parser(_node)
+          ::EhbrsRubyUtils::Bga::Parsers::Table::Players
         end
 
         require_sub __FILE__
