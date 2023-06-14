@@ -9,7 +9,7 @@ module EhbrsRubyUtils
   module Bga
     module Parsers
       class Table < ::Aranha::Parsers::Html::Item
-        class Players < ::Aranha::Parsers::Html::ItemList
+        class EndedPlayers < ::Aranha::Parsers::Html::ItemList
           ITEMS_XPATH = '//div[starts-with(@id, "score_entry_")]'
           RANK_VALUES = { vencedor: 1, perdedor: 2 }.freeze
 
