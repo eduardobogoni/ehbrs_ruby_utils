@@ -24,10 +24,7 @@ module EhbrsRubyUtils
 
         def data
           r = super
-          %i[players].each do |key|
-            r[key] = self.class.const_get(key.to_s.camelize).from_node(r.fetch(key)).data
-          end
-          %i[creation_time game_code game_conceded options].each do |key|
+          %i[creation_time game_code game_conceded options players].each do |key|
             r[key] = send("process_#{key}", r.fetch(key))
           end
           r
@@ -51,8 +48,16 @@ module EhbrsRubyUtils
           node.present?
         end
 
+        # @param node [Nokogiri::XML::Element]
+        # @return [Hash]
         def process_options(node)
           ::EhbrsRubyUtils::Bga::Parsers::Table::Options.from_node(node).data
+        end
+
+        # @param node [Nokogiri::XML::Element]
+        # @return [Hash]
+        def process_players(node)
+          ::EhbrsRubyUtils::Bga::Parsers::Table::Players.from_node(node).data
         end
 
         require_sub __FILE__
