@@ -32,9 +32,12 @@ module EhbrsRubyUtils
         def fetch_data
           session.navigate.to url
           session.wait_for_element(xpath: RESULTS_XPATH)
-          { id: table_id }.merge(
-            ::EhbrsRubyUtils::Bga::Parsers::Table.from_content(session.current_source).data
-          )
+          { id: table_id }.merge(parser_class.from_content(session.current_source).data)
+        end
+
+        # @return [Class]
+        def parser_class
+          ::EhbrsRubyUtils::Bga::Parsers::Table
         end
       end
     end
