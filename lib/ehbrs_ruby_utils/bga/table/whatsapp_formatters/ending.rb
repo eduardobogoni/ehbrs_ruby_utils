@@ -10,9 +10,6 @@ module EhbrsRubyUtils
           enable_simple_cache
           common_constructor :table
 
-          TITLE_BEFORE = 0x22D8.chr(::Encoding::UTF_8) + ' '
-          TITLE_AFTER = ' ' + 0x22D9.chr(::Encoding::UTF_8)
-
           ROOT_ITENS = {
             'Jogo' => :game_name,
             'Criada em' => :creation_time,
@@ -20,6 +17,7 @@ module EhbrsRubyUtils
             'Endereço' => :url
           }.freeze
           SECTION_SEPARATOR = "\n\n"
+          TITLE_ICON = 0x1F3C6.chr(::Encoding::UTF_8)
 
           # @return [Pathname]
           def image_local_path
@@ -49,7 +47,7 @@ module EhbrsRubyUtils
           end
 
           def title_to_s(title)
-            "*#{TITLE_BEFORE}#{title}#{TITLE_AFTER}*\n\n"
+            '*' + [TITLE_ICON, title, TITLE_ICON].join(' ') + "*\n\n"
           end
 
           def players
