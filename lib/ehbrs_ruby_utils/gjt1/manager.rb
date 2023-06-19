@@ -14,7 +14,7 @@ module EhbrsRubyUtils
       # @param table [EhbrsRubyUtils::Bga::Table]
       # @return [void]
       def bga_table_notify(table)
-        formatter = ::EhbrsRubyUtils::Bga::TableWhatsappFormatter.new(table)
+        formatter = ::EhbrsRubyUtils::Bga::Table::WhatsappFormatters::Ending.new(table)
         whatsapp_send(formatter.to_s, formatter.image_local_path)
       end
 
