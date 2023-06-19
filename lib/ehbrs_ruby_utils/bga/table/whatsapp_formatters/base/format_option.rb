@@ -6,9 +6,9 @@ module EhbrsRubyUtils
   module Bga
     class Table
       module WhatsappFormatters
-        class Ending
+        class Base
           class FormatOption
-            enable_method_class
+            acts_as_instance_method
             common_constructor :table_formatter, :option
 
             def result

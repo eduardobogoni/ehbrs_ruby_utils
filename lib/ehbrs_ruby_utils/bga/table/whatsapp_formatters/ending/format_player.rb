@@ -1,27 +1,25 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_utils/core_ext'
+require 'ehbrs_ruby_utils/bga/table/whatsapp_formatters/base/format_player'
 
 module EhbrsRubyUtils
   module Bga
     class Table
       module WhatsappFormatters
-        class Ending
-          class FormatPlayer
-            enable_method_class
-            common_constructor :table_formatter, :player
+        class Ending < ::EhbrsRubyUtils::Bga::Table::WhatsappFormatters::Base
+          class FormatPlayer < ::EhbrsRubyUtils::Bga::Table::WhatsappFormatters::Base::FormatPlayer
+            acts_as_instance_method
 
-            FIELD_SEPARATOR = ' - '
+            FIELDS = %w[table_rank name score].freeze
 
-            def result
-              %w[table_rank name score].map { |v| send(v) }.join(FIELD_SEPARATOR)
+            def fields
+              FIELDS
             end
 
             def table_rank
               "*#{player.rank}º*"
             end
-
-            delegate :name, to: :player
 
             def score
               "⭐ #{player.score}"
