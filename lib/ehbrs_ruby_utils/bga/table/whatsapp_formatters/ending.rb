@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'ehbrs_ruby_utils/bga/session'
-require 'ehbrs_ruby_utils/executables'
 require 'eac_ruby_utils/core_ext'
 
 module EhbrsRubyUtils
