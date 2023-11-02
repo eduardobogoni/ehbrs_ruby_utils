@@ -31,7 +31,7 @@ module EhbrsRubyUtils
       end
 
       def sevenzip_extract_command(target_dir)
-        ::Ehbrs::Executables.sevenzip.command('x', path, '-o', target_dir)
+        ::EhbrsRubyUtils::Executables.sevenzip.command('x', path, '-o', target_dir)
       end
 
       def tar_extract_command(target_dir)

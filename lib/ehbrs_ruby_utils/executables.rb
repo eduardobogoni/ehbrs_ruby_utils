@@ -29,6 +29,12 @@ module EhbrsRubyUtils
       def mudslide_uncached
         env.executable('mudslide', exec_args: %w[npx mudslide@latest], check_args: %w[--version])
       end
+
+      # !method sevenzip
+      # @return [EacRubyUtils::Envs::Executable]
+      def sevenzip_uncached
+        env.executable('7z', '--help')
+      end
     end
   end
 end
