@@ -2,6 +2,8 @@
 
 require 'eac_fs/file_info'
 require 'eac_ruby_utils/core_ext'
+require 'ehbrs/executables'
+require 'ehbrs_ruby_utils/executables'
 
 module EhbrsRubyUtils
   module Fs
@@ -37,7 +39,7 @@ module EhbrsRubyUtils
       end
 
       def rar_extract_command(target_dir)
-        ::Ehbrs::Executables.rar.command('x', path.expand_path).chdir(target_dir)
+        ::EhbrsRubyUtils::Executables.rar.command('x', path.expand_path).chdir(target_dir)
       end
 
       def zip_extract_command(target_dir)
