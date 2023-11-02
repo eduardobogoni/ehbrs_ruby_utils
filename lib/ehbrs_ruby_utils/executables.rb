@@ -16,6 +16,7 @@ module EhbrsRubyUtils
 
       {
         '-?' => %w[rar],
+        '-h' => %w[unzip],
         '-version' => %w[ffmpeg ffprobe tar]
       }.each do |validate_arg, commands|
         commands.each do |command|

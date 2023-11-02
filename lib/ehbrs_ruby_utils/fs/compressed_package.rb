@@ -2,7 +2,6 @@
 
 require 'eac_fs/file_info'
 require 'eac_ruby_utils/core_ext'
-require 'ehbrs/executables'
 require 'ehbrs_ruby_utils/executables'
 
 module EhbrsRubyUtils
@@ -43,7 +42,7 @@ module EhbrsRubyUtils
       end
 
       def zip_extract_command(target_dir)
-        ::Ehbrs::Executables.unzip.command(path, '-d', target_dir)
+        ::EhbrsRubyUtils::Executables.unzip.command(path, '-d', target_dir)
       end
     end
   end
