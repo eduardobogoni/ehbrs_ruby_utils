@@ -35,7 +35,7 @@ module EhbrsRubyUtils
       end
 
       def tar_extract_command(target_dir)
-        ::Ehbrs::Executables.tar.command('-xf', path, '-C', target_dir)
+        ::EhbrsRubyUtils::Executables.tar.command('-xf', path, '-C', target_dir)
       end
 
       def rar_extract_command(target_dir)
