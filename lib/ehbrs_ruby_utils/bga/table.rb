@@ -60,7 +60,7 @@ module EhbrsRubyUtils
 
       # @return [EhbrsRubyUtils::Bga::Game]
       def game_uncached
-        ::EhbrsRubyUtils::Bga::Game.new(game_code)
+        ::EhbrsRubyUtils::Bga::Game.new(game_code, game_name)
       end
 
       SET_ITEMS.each do |item|
