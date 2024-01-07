@@ -15,9 +15,10 @@ module EhbrsRubyUtils
         # @param table [EhbrsRubyUtils::Bga::Table]
         # @return [void]
         define_method "bga_table_#{type}_notify" do |table|
-          formatter = ::EhbrsRubyUtils::Bga::Table::WhatsappFormatters.const_get(type.camelize)
-                        .new(table)
-          whatsapp_send(formatter.to_s, formatter.image_local_path)
+          whatsapp_formatter_send(
+            ::EhbrsRubyUtils::Bga::Table::WhatsappFormatters.const_get(type.camelize),
+            table
+          )
         end
       end
 
@@ -48,6 +49,12 @@ module EhbrsRubyUtils
 
       def mudslide_run(*args)
         ::EhbrsRubyUtils::Executables.mudslide.command(*args).system!
+      end
+
+      # @return [void]
+      def whatsapp_formatter_send(formatter_class, formatter_owner)
+        formatter = formatter_class.new(formatter_owner)
+        whatsapp_send(formatter.to_s, formatter.image_local_path)
       end
     end
   end
