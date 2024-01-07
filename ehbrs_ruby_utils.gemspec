@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'aranha-selenium', '~> 0.8'
   s.add_dependency 'avm', '~> 0.84', '>= 0.84.2'
   s.add_dependency 'dentaku', '~> 3.5', '>= 3.5.2'
-  s.add_dependency 'eac_fs', '~> 0.16'
+  s.add_dependency 'eac_fs', '~> 0.17'
   s.add_dependency 'eac_rest', '~> 0.10'
   s.add_dependency 'eac_ruby_utils', '~> 0.120'
   s.add_dependency 'eac_templates', '~> 0.5'
