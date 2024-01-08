@@ -27,6 +27,12 @@ module EhbrsRubyUtils
         game_conceded
       end
 
+      # @param key [String]
+      # @return [String, nil]
+      def option_value(label)
+        options.find { |o| o.label == label }.if_present(&:value)
+      end
+
       # @return [Addressable::URI]
       def url
         table_url(id)
