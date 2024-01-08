@@ -13,6 +13,9 @@ module EhbrsRubyUtils
       enable_simple_cache
       common_constructor :data
 
+      GAME_MODE_KEY = 'Modo de Jogo'
+      GAME_MODE_FRIENDLY_VALUE = 'Modo Amigável'
+      GAME_MODE_NORMAL_VALUE = 'Modo Normal'
       SET_ITEMS = %i[options players].freeze
 
       ([:id] + ::EhbrsRubyUtils::Bga::Parsers::Table.fields.map(&:name) - SET_ITEMS)
@@ -20,6 +23,15 @@ module EhbrsRubyUtils
         define_method field do
           data.fetch(field)
         end
+      end
+
+      # @return [Boolean]
+      def friendly?
+        value = option_value(GAME_MODE_KEY)
+        return true if value == GAME_MODE_FRIENDLY_VALUE
+        return false if value == GAME_MODE_NORMAL_VALUE
+
+        raise "Unknown \"#{GAME_MODE_KEY}\" value: \"#{value}\""
       end
 
       # @return [Boolean]
