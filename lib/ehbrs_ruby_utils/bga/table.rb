@@ -45,6 +45,12 @@ module EhbrsRubyUtils
         options.find { |o| o.label == label }.if_present(&:value)
       end
 
+      # @param id [Integer]
+      # @return [EhbrsRubyUtils::Bga::Table::Player, nil]
+      def player_by_id(id)
+        players.find { |p| p.id.to_s == id.to_s }
+      end
+
       # @return [Addressable::URI]
       def url
         table_url(id)
