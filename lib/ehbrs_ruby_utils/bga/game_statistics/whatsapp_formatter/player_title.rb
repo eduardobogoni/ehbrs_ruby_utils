@@ -17,7 +17,8 @@ module EhbrsRubyUtils
 
           # @return [String, nil]
           def username_by_tables
-            formatter.game_tables.lazy.map { |table| username_by_table(table) }.find(&:present?)
+            formatter.with_players_tables.lazy.map { |table| username_by_table(table) }
+              .find(&:present?)
           end
 
           # @param table [EhbrsRubyUtils::Bga::Table]

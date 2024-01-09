@@ -14,8 +14,8 @@ module EhbrsRubyUtils
 
         enable_simple_cache
         common_constructor :game_statistics
-        delegate :game, :friendly_tables_count, :game_tables, :normal_tables, :players,
-                 :until_table, :with_players_tables, to: :game_statistics
+        delegate :game, :friendly_tables_count, :normal_tables, :players, :until_table,
+                 :with_players_tables, to: :game_statistics
 
         # @return [Hash]
         def root_content
