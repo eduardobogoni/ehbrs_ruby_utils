@@ -10,6 +10,11 @@ module EhbrsRubyUtils
 
       private
 
+      # @return [Enumerable<EhbrsRubyUtils::Bga::Table>]
+      def normal_tables_uncached
+        with_players_tables.reject(&:friendly?)
+      end
+
       # @param table [EhbrsRubyUtils::Bga::Table]
       # @return [Boolean]
       def with_players_table?(table)
