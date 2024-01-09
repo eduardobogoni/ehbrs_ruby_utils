@@ -8,6 +8,11 @@ module EhbrsRubyUtils
       enable_simple_cache
       common_constructor :game, :game_tables, :players, :until_table, default: [nil]
 
+      # @return [Integer]
+      def friendly_tables_count
+        game_tables.count - normal_tables.count
+      end
+
       private
 
       # @return [Enumerable<EhbrsRubyUtils::Bga::Table>]
