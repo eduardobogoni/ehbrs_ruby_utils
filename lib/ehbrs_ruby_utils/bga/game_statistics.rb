@@ -10,7 +10,7 @@ module EhbrsRubyUtils
 
       # @return [Integer]
       def friendly_tables_count
-        game_tables.count - normal_tables.count
+        with_players_tables.count - normal_tables.count
       end
 
       private
