@@ -2,6 +2,7 @@
 
 require 'ehbrs_ruby_utils/core_ext'
 require 'ehbrs_ruby_utils/music/sort/commands/base'
+require 'ehbrs_ruby_utils/music/sort/files/base'
 
 module EhbrsRubyUtils
   module Music
@@ -24,7 +25,7 @@ module EhbrsRubyUtils
             ::SortedFileFactory::SECTIONS.each do |section|
               i = 1
               (@config[section] || []).each do |name|
-                r << SortedFile.new(section, i, name, nil)
+                r << ::EhbrsRubyUtils::Music::Sort::Files::Base.new(section, i, name, nil)
                 i += 1
               end
             end
