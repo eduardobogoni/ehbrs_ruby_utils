@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'ehbrs_ruby_utils/core_ext'
+require 'ehbrs_ruby_utils/music/sort/files/scanner'
 
 module EhbrsRubyUtils
   module Music
@@ -21,7 +22,7 @@ module EhbrsRubyUtils
           end
 
           def scanner_uncached
-            ::Scanner.new(root)
+            ::EhbrsRubyUtils::Music::Sort::Files::Scanner.new(root)
           end
         end
       end
