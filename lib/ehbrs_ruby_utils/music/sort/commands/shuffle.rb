@@ -2,6 +2,7 @@
 
 require 'ehbrs_ruby_utils/core_ext'
 require 'ehbrs_ruby_utils/music/sort/commands/base'
+require 'ehbrs_ruby_utils/music/sort/files/factory'
 
 module EhbrsRubyUtils
   module Music
@@ -42,8 +43,9 @@ module EhbrsRubyUtils
 
           def build_config
             config = {}
-            config[::SortedFileFactory::SECTION_CURRENT] = scanner.all.to_a.shuffle.map(&:name)
-            config[::SortedFileFactory::SECTION_NEW] = []
+            config[::EhbrsRubyUtils::Music::Sort::Files::Factory::SECTION_CURRENT] =
+              scanner.all.to_a.shuffle.map(&:name)
+            config[::EhbrsRubyUtils::Music::Sort::Files::Factory::SECTION_NEW] = []
             config
           end
         end

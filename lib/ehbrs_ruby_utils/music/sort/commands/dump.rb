@@ -3,6 +3,7 @@
 require 'ehbrs_ruby_utils/core_ext'
 require 'ehbrs_ruby_utils/music/sort/commands/base'
 require 'ehbrs_ruby_utils/music/sort/files/base'
+require 'ehbrs_ruby_utils/music/sort/files/factory'
 
 module EhbrsRubyUtils
   module Music
@@ -22,7 +23,7 @@ module EhbrsRubyUtils
 
           def to_rename
             r = []
-            ::SortedFileFactory::SECTIONS.each do |section|
+            ::EhbrsRubyUtils::Music::Sort::Files::Factory::SECTIONS.each do |section|
               i = 1
               (@config[section] || []).each do |name|
                 r << ::EhbrsRubyUtils::Music::Sort::Files::Base.new(section, i, name, nil)
