@@ -56,10 +56,6 @@ module EhbrsRubyUtils
 
       private
 
-      def mudslide_run(*args)
-        ::EhbrsRubyUtils::Executables.mudslide.command(*args).system!
-      end
-
       # @return [void]
       def whatsapp_formatter_send(formatter_class, formatter_owner)
         formatter = formatter_class.new(formatter_owner)
