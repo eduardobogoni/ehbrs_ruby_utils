@@ -4,6 +4,7 @@ module EhbrsRubyUtils
   class CircularListSpreader
     class GroupLevel
       include ::EhbrsRubyUtils::CircularListSpreader::BaseLevel
+
       enable_simple_cache
 
       common_constructor :label

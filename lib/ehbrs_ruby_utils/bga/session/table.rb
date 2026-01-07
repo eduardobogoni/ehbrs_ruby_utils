@@ -5,6 +5,7 @@ module EhbrsRubyUtils
     class Session < ::SimpleDelegator
       class Table
         include ::EhbrsRubyUtils::Bga::Urls
+
         enable_method_class
         enable_simple_cache
         common_constructor :session, :table_id

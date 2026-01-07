@@ -5,6 +5,7 @@ module EhbrsRubyUtils
     class Session < ::SimpleDelegator
       class PlayerTablesOnGameStats
         include ::EhbrsRubyUtils::Bga::Urls
+
         enable_method_class
         enable_simple_cache
         common_constructor :session, :player_id, :until_table_id, default: [nil] do

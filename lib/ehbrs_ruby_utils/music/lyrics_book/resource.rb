@@ -17,6 +17,7 @@ module EhbrsRubyUtils
 
         enable_simple_cache
         include ::Comparable
+
         common_constructor :parent, :path
         attr_accessor :previous
 

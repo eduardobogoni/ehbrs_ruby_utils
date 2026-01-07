@@ -4,6 +4,7 @@ module EhbrsRubyUtils
   module Gjt1
     class Manager
       include ::Singleton
+
       acts_as_abstract :bga_username, :bga_password, :whatsapp_recipient
 
       %w[beginning ending].each do |type|

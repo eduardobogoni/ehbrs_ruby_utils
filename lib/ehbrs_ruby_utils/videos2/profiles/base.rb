@@ -10,6 +10,7 @@ module EhbrsRubyUtils
 
         included do
           include ActiveSupport::Callbacks
+
           define_callbacks :convert, :swap
         end
 

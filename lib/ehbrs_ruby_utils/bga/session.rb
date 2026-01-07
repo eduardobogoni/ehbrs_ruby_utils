@@ -4,6 +4,7 @@ module EhbrsRubyUtils
   module Bga
     class Session < ::SimpleDelegator
       include ::EhbrsRubyUtils::Bga::Urls
+
       MESSAGE_ID = 'head_infomsg_1'
 
       common_constructor :username, :password,

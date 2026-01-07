@@ -6,6 +6,7 @@ module EhbrsRubyUtils
       module WhatsappFormatters
         class Base
           include ::EhbrsRubyUtils::Bga::WhatsappFormatter
+
           acts_as_abstract :players_title, :root_items_title
           enable_simple_cache
           common_constructor :table

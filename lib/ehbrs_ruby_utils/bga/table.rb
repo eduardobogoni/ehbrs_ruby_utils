@@ -4,6 +4,7 @@ module EhbrsRubyUtils
   module Bga
     class Table
       include ::EhbrsRubyUtils::Bga::Urls
+
       enable_simple_cache
       common_constructor :data
 
@@ -14,9 +15,9 @@ module EhbrsRubyUtils
 
       ([:id] + ::EhbrsRubyUtils::Bga::Parsers::Table.fields.map(&:name) - SET_ITEMS)
         .each do |field|
-        define_method field do
-          data.fetch(field)
-        end
+          define_method field do
+            data.fetch(field)
+          end
       end
 
       # @return [Boolean]

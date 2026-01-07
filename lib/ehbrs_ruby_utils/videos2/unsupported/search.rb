@@ -7,6 +7,7 @@ module EhbrsRubyUtils
     module Unsupported
       class Search
         include ::EacFs::Traversable
+
         enable_speaker
         enable_simple_cache
 

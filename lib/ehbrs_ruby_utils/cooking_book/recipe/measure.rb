@@ -44,7 +44,7 @@ module EhbrsRubyUtils
         end
 
         def quantity_to_s
-          numerator.to_s + (denominator.if_present('') { |v| "/ #{v}" })
+          numerator.to_s + denominator.if_present('') { |v| "/ #{v}" }
         end
 
         def variable?
