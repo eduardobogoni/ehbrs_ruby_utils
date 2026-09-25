@@ -22,7 +22,7 @@ module EhbrsRubyUtils
 
       # @return [Boolean]
       def friendly?
-        value = option_value(GAME_MODE_KEY)
+        value = game_mode_value
         return true if value == GAME_MODE_FRIENDLY_VALUE
         return false if value == GAME_MODE_NORMAL_VALUE
 
@@ -32,6 +32,11 @@ module EhbrsRubyUtils
       # @return [Boolean]
       def game_conceded?
         game_conceded
+      end
+
+      # @return [String]
+      def game_mode_value
+        option_value(GAME_MODE_KEY)
       end
 
       # @param key [String]
